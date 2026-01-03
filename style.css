@@ -1,3 +1,37 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5; /* Accessible line height */
+  -webkit-font-smoothing: antialiased; /* Improve text rendering */
+}
+
+body {
+  margin: 0;
+}
+
+a:any-link {
+  color: initial;
+  text-decoration: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word; /* Avoid text overflows */
+}
+p {
+  text-wrap: pretty;
+  hyphens: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
 .playfair-display-1 {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
