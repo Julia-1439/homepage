@@ -1,0 +1,15 @@
+.playfair-display-1 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal; /* normal is 400 */
+  font-style: normal;
+}
+
+.roboto-1 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal; /* normal is 400 */
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
