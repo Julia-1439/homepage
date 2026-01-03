@@ -1,4 +1,10 @@
-*, *::before, *::after {
+/* ========================================================================== */
+/* Normalize */
+/* ========================================================================== */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -16,21 +22,40 @@ a:any-link {
   text-decoration: none;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word; /* Avoid text overflows */
 }
 p {
   text-wrap: pretty;
   hyphens: auto;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
+
+/* ========================================================================== */
+/* Fonts */
+/* ========================================================================== */
 
 .playfair-display-1 {
   font-family: "Playfair Display", serif;
@@ -44,6 +69,20 @@ h1, h2, h3, h4, h5, h6 {
   font-optical-sizing: auto;
   font-weight: normal; /* normal is 400 */
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
+}
+
+/* ========================================================================== */
+/* Main styling */
+/* ========================================================================== */
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.page-container {
+  max-width: 1150px;
+  display: flex;
+  flex-flow: column nowrap;
 }
