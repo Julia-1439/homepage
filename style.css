@@ -79,10 +79,20 @@ h6 {
 body {
   display: flex;
   justify-content: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .page-container {
   max-width: 1150px;
   display: flex;
   flex-flow: column nowrap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
 }
