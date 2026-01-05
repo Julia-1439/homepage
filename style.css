@@ -51,6 +51,7 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+  margin: 0;
 }
 
 /* ========================================================================== */
@@ -76,16 +77,20 @@ h6 {
 /* Main styling */
 /* ========================================================================== */
 
+html {
+  --padding-size-1: 64px;
+  --padding-size-2: 48px;
+  --padding-size-3: 32px;
+  --padding-size-4: 16px;
+  --padding-size-5: 8px;
+
+  --palette-darkgray: rgb(29, 29, 29);
+}
+
 body {
   display: flex;
   justify-content: center;
   font-family: "Roboto", sans-serif;
-}
-
-.page-container {
-  max-width: 1150px;
-  display: flex;
-  flex-flow: column nowrap;
 }
 
 h1,
@@ -95,4 +100,73 @@ h4,
 h5,
 h6 {
   font-family: "Playfair Display", serif;
+}
+
+h2 {
+  margin: var(--padding-size-4) 0;
+}
+
+h3 {
+  margin: var(--padding-size-5) 0;
+}
+
+.darkgray-color {
+  color: var(--palette-darkgray);
+}
+
+.flex-row-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon { 
+  display: inline-block;
+  width: 24px;
+}
+
+.center-vertically {
+  display: flex;
+  align-items: center;
+}
+
+.center-vertically:not(:empty) {
+  gap: var(--padding-size-5);
+}
+
+.page-container {
+  max-width: 1150px;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0 var(--padding-size-2);
+}
+
+.my-work {
+  padding-top: var(--padding-size-1);
+  padding-bottom: var(--padding-size-1);
+}
+
+.project-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 0.33333fr));
+  grid-auto-rows: 1fr;
+  gap: var(--padding-size-3);
+}
+
+.project-card {
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+  -webkit-box-shadow: 8px 8px 19px -3px rgba(0,0,0,0.37); 
+  box-shadow: 8px 8px 19px -3px rgba(0,0,0,0.37);
+}
+
+.project-card img {
+  object-fit: cover;
+}
+
+.project-card-body {
+  padding: var(--padding-size-5) var(--padding-size-4);
+}
+
+.project-card-body > p {
+  margin: 0;
 }
