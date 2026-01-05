@@ -134,7 +134,13 @@ h3 {
   align-items: center;
 }
 
-.center-vertically:not(:empty) {
+.right-horizontally {
+  display: flex;
+  justify-content: right;
+}
+
+.center-vertically:not(:empty),
+.right-horizontally:not(:empty) {
   gap: var(--padding-size-5);
 }
 
@@ -145,9 +151,69 @@ h3 {
   padding: 0 var(--padding-size-2);
 }
 
+.page-container:first-child {
+  padding-top: var(--padding-size-3);
+}
+
+.page-container:last-child {
+  padding-bottom: var(--padding-size-3);
+}
+
+main > header {
+  position: relative;
+  padding-bottom: var(--height-adjustment);
+  --height-adjustment: 40px;
+}
+
+main > header::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--padding-size-2));
+  width: calc(100% + 2 * var(--padding-size-2));
+  background-color: #0891B2;
+  transform: translateY(-140px) skewY(-10deg);
+  z-index: -1;
+
+  min-height: calc(100% + var(--height-adjustment));
+}
+
+main > header {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+}
+
+.portrait-container {
+  position: relative;
+  height: 400px;
+  -webkit-box-shadow: 8px 8px 19px -3px rgba(0,0,0,0.37); 
+  box-shadow: 8px 8px 19px -3px rgba(0,0,0,0.37);
+}
+
+.portrait-container > img {
+  max-height: 100%;
+  width: 100%; /* @todo: why do I need this if I have object-fit: cover? */
+  object-fit: cover;
+}
+
+.portrait-container > h1 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.about-me-container {
+  align-self: center;
+  background-color: white;
+  padding: var(--padding-size-3) var(--padding-size-4);
+  -webkit-box-shadow: 8px 8px 19px -3px rgba(0,0,0,0.37); 
+  box-shadow: 8px 8px 19px -3px rgba(0,0,0,0.37);
+}
+
 .my-work {
-  padding-top: var(--padding-size-1);
-  padding-bottom: var(--padding-size-1);
+  margin-top: var(--padding-size-1);
+  margin-bottom: var(--padding-size-1);
 }
 
 .project-cards-container {
