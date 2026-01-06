@@ -148,23 +148,21 @@ h3 {
   gap: var(--padding-size-5);
 }
 
+main > header .right-horizontally:not(:empty) {
+  gap: var(--padding-size-4);
+}
+
 .page-container {
   max-width: 1150px;
   display: flex;
   flex-flow: column nowrap;
-  padding: 0 var(--padding-size-2);
-}
-
-.page-container:first-child {
-  padding-top: var(--padding-size-3);
-}
-
-.page-container:last-child {
-  padding-bottom: var(--padding-size-3);
+  /* padding: 0 var(--padding-size-2); */
+  /* margin: 0 var(--padding-size-2); */
 }
 
 main > header {
   position: relative;
+  padding: var(--padding-size-2);
   padding-bottom: var(--height-adjustment);
   --height-adjustment: 40px;
 }
@@ -172,8 +170,7 @@ main > header {
 main > header::before {
   content: "";
   position: absolute;
-  left: calc(-1 * var(--padding-size-2));
-  width: calc(100% + 2 * var(--padding-size-2));
+  width: 100%;
   background-color: #0891B2;
   transform: translateY(-140px) skewY(-10deg);
   z-index: -1;
@@ -218,6 +215,7 @@ main > header {
 .my-work {
   margin-top: var(--padding-size-1);
   margin-bottom: var(--padding-size-1);
+  padding: 0 var(--padding-size-2);
 }
 
 .project-cards-container {
@@ -244,4 +242,21 @@ main > header {
 
 .project-card-body > p {
   margin: 0;
+}
+
+.page-container > footer {
+  background-color: #0891B2;
+  background-clip: border-box;
+  color: white;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding: var(--padding-size-2);
+}
+
+.page-container > header:first-of-type {
+  padding-top: var(--padding-size-3);
+}
+
+.page-container > footer:last-of-type {
+  padding-bottom: var(--padding-size-3);
 }
