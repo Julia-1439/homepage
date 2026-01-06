@@ -179,20 +179,20 @@ main > header::before {
 
 main > header {
   display: grid;
-  grid-template-columns: 4fr 6fr;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 400px;
 }
 
 .portrait-container {
   position: relative;
-  height: 400px;
   -webkit-box-shadow: 8px 8px 19px -3px rgba(0,0,0,0.37); 
   box-shadow: 8px 8px 19px -3px rgba(0,0,0,0.37);
 }
 
 .portrait-container > img {
-  max-height: 100%;
-  width: 100%; /* @todo: why do I need this if I have object-fit: cover? */
   object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .portrait-container > h1 {
