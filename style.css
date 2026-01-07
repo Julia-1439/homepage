@@ -250,6 +250,7 @@ main > header {
 
 .project-card img {
   object-fit: cover;
+  width: 100%;
   height: 100%;
 }
 
@@ -307,4 +308,16 @@ main > header {
 
 .page-container > footer:last-of-type {
   padding-bottom: var(--padding-size-3);
+}
+
+@media (max-width: 1000px) {
+  .project-cards-container {
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: var(--padding-size-3);
+    row-gap: var(--padding-size-1);
+  }
+  
+  .my-work {
+    padding: 0 var(--padding-size-1);
+  }
 }
