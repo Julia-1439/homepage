@@ -250,6 +250,7 @@ main > header {
 
 .project-card img {
   object-fit: cover;
+  height: 100%;
 }
 
 .project-card-body {
