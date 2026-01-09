@@ -31,16 +31,6 @@ svg {
   max-width: 100%;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word; /* Avoid text overflows */
-}
-
 p {
   text-wrap: pretty;
   /* hyphens: auto; */
@@ -106,7 +96,10 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+}
+
+.page-header h1 {
   text-shadow: 1px 1px 2px black;
 }
 
@@ -172,34 +165,33 @@ h3 {
   /* margin: 0 var(--padding-size-2); */
 }
 
-main > header {
+.page-header {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 400px;
   position: relative;
   padding: var(--padding-size-2);
   padding-bottom: var(--height-adjustment);
   --height-adjustment: 40px;
 }
 
-main > header::before {
+.page-header::before {
   content: "";
   position: absolute;
   width: 100%;
   background-color: var(--palette-stencil);
-  transform: translateY(-140px) skewY(-10deg);
-  z-index: -1;
-
+  transform: translateY(calc(-100px - var(--height-adjustment))) skewY(-10deg);
   min-height: calc(100% + var(--height-adjustment));
+  z-index: -1;
 }
 
-main > header {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: 400px;
+.box-shadow {
+  -webkit-box-shadow: 8px 8px 19px -3px rgba(0, 0, 0, 0.37);
+  box-shadow: 8px 8px 19px -3px rgba(0, 0, 0, 0.37);
 }
 
 .portrait-container {
   position: relative;
-  -webkit-box-shadow: 8px 8px 19px -3px rgba(0, 0, 0, 0.37);
-  box-shadow: 8px 8px 19px -3px rgba(0, 0, 0, 0.37);
 }
 
 .portrait-container > img {
@@ -220,8 +212,6 @@ main > header {
   align-self: center;
   background-color: white;
   padding: var(--padding-size-3) var(--padding-size-4);
-  -webkit-box-shadow: 8px 8px 19px -3px rgba(0, 0, 0, 0.37);
-  box-shadow: 8px 8px 19px -3px rgba(0, 0, 0, 0.37);
 }
 
 .about-me-container h2,
@@ -303,7 +293,7 @@ main > header {
   transform: scale(1.3);
 }
 
-.page-container > header:first-of-type {
+.page-container header:first-of-type {
   padding-top: var(--padding-size-3);
 }
 
@@ -311,13 +301,89 @@ main > header {
   padding-bottom: var(--padding-size-3);
 }
 
-@media (max-width: 1000px) {
+.tablet {
+  display: none;
+}
+
+@media (max-width: 1000px) and (min-width: 600px) {
+  .tablet {
+    display: revert;
+  }
+
+  .non-tablet {
+    display: none;
+  }
+
+  .page-container {
+    margin-top: 160px;
+    --padding-size-1: 80px;
+  }
+
+  .about-me-container {
+    position: relative;
+  }
+
+  .about-me-container h2 {
+    text-align: center;
+  }
+
+  .page-header {
+    position: relative;
+  }
+
+  .page-header::before {
+    transform: translateY(calc(-100px - var(--height-adjustment) - 90px)) skewY(-10deg);
+  }
+
+  .about-me-container .generic-container:has(h1) {
+    position: absolute;
+    min-width: calc(50% - 240px); /* @todo use variable to have it dynamically match with the image */
+    width: 50%;
+    right: 0;
+    top: -96px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-me-container h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: -32px;
+    top: -96px;
+    overflow-wrap: revert;
+  }
+
+  .text-blocker {
+    float: left;
+    shape-outside: margin-box;
+  }
+
+  .about-me-container .text-blocker {
+    width: 50%;
+    min-width: 240px;
+    max-height: 300px;
+    object-fit: cover;
+    margin-right: var(--padding-size-4);
+    transform-origin: bottom right;
+    transform: scale(1.2);
+  }
+
+  .page-header {
+    grid-template-columns: 1fr; /* Idk why display: block; doesn't just work */
+    --height-adjustment: 90px;
+  }
+
+  .about-me-container {
+    margin: 0 var(--padding-size-1);
+    min-width: 430px;
+  }
+
   .project-cards-container {
     grid-template-columns: repeat(2, 0.5fr);
     gap: var(--padding-size-3);
     row-gap: var(--padding-size-1);
   }
-  
+
   .my-work {
     padding: 0 var(--padding-size-1);
   }
