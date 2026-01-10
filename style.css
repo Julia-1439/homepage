@@ -253,6 +253,11 @@ padding: var(--padding-size-3) var(--padding-size-4);
   grid-template-rows: 3fr 2fr;
   -webkit-box-shadow: 8px 8px 19px -3px rgba(0, 0, 0, 0.37);
   box-shadow: 8px 8px 19px -3px rgba(0, 0, 0, 0.37);
+  transition: transform 0.5s;
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
 }
 
 .project-card img {
