@@ -181,7 +181,7 @@ h3 {
   position: absolute;
   width: 100%;
   background-color: var(--palette-stencil);
-  transform: translateY(calc(-100px - var(--height-adjustment))) skewY(-10deg);
+  transform: translateY(-40%) skewY(-11deg);
   min-height: calc(100% + var(--height-adjustment));
   z-index: -1;
 }
