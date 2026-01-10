@@ -171,7 +171,8 @@ h3 {
   grid-template-rows: 400px;
   position: relative;
   padding: var(--padding-size-2);
-  padding-bottom: var(--height-adjustment);
+  /* padding-bottom: var(--height-adjustment); */
+  padding: var(--padding-size-1);
   --height-adjustment: 40px;
 }
 
@@ -293,11 +294,11 @@ h3 {
   transform: scale(1.3);
 }
 
-.page-container header:first-of-type {
+.page-header {
   padding-top: var(--padding-size-3);
 }
 
-.page-container > footer:last-of-type {
+.page-footer {
   padding-bottom: var(--padding-size-3);
 }
 
@@ -305,7 +306,19 @@ h3 {
   display: none;
 }
 
-@media (max-width: 1000px) and (min-width: 600px) {
+/* both tablet and mobile */
+@media (max-width: 1000px) {
+  html {
+    --padding-size-1: 80px;
+  }
+
+  .project-cards-container {
+    gap: var(--padding-size-3);
+    row-gap: var(--padding-size-1);
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 601px) {
   .tablet {
     display: revert;
   }
@@ -316,7 +329,6 @@ h3 {
 
   .page-container {
     margin-top: 160px;
-    --padding-size-1: 80px;
   }
 
   .about-me-container {
@@ -380,11 +392,71 @@ h3 {
 
   .project-cards-container {
     grid-template-columns: repeat(2, 0.5fr);
-    gap: var(--padding-size-3);
-    row-gap: var(--padding-size-1);
   }
 
   .my-work {
     padding: 0 var(--padding-size-1);
+  }
+}
+
+@media (max-width: 600px) {
+  .page-header {
+    grid-template-columns: 1fr;
+    padding: var(--padding-size-3);
+  }  
+
+  .page-header h1 {
+    overflow-wrap: break-word;
+  }
+  
+  .page-header::before {
+    transform: translateY(-70%) skewY(-20deg);
+  }
+
+  .about-me-container {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    padding-bottom: 0;
+  }
+
+  .about-me-container h2 {
+    text-align: center;
+  }
+
+  .about-me-container .icons-row {
+    justify-content: center;
+  }
+  
+  .my-work {
+    padding: 0 ;
+  }
+
+  .my-work h2 {
+    text-align: center;
+  }
+
+  .project-cards-container {
+    justify-content: center;
+  }
+
+  .project-cards-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 0.33333fr));
+  }
+
+  .page-footer {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .contact-info {
+    padding: var(--padding-size-3) var(--padding-size-3) 0;
+  }
+
+  .page-footer h2 {
+    text-align: center;
+  }
+
+  .page-footer .icons-row {
+    justify-content: center;
   }
 }
