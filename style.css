@@ -335,7 +335,7 @@ padding: var(--padding-size-3) var(--padding-size-4);
 /* both tablet and mobile */
 @media (max-width: 1000px) {
   html {
-    --padding-size-1: 80px;
+    /* --padding-size-1: 80px; */
   }
 
   .project-cards-container {
@@ -367,6 +367,7 @@ padding: var(--padding-size-3) var(--padding-size-4);
 
   .page-header {
     position: relative;
+    padding: 0;
   }
 
   .page-header::before {
