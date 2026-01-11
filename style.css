@@ -126,6 +126,10 @@ h3 {
   width: 24px;
 }
 
+.hidden-text-for-aria {
+  display: none;
+}
+
 .icon.x {
   transform: scale(0.85);
 }
