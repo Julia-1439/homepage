@@ -25,15 +25,22 @@
           <div class="portrait-container non-tablet box-shadow">
             <h1>Phátography</h1>
             <picture>
-              <source media="(max-width: 600px)" srcset="assets/red-whiskered-bulbul-320w.jpg">
-              <img src="assets/red-whiskered-bulbul-548w.jpg" alt="a red whiskered bulbul bird">
+              <source
+                media="(max-width: 600px)"
+                srcset="assets/red-whiskered-bulbul-320w.jpg"
+              />
+              <img
+                srcset="assets/red-whiskered-bulbul-548w.jpg 2x"
+                src="assets/red-whiskered-bulbul-320w.jpg"
+                alt="a red whiskered bulbul bird"
+              />
             </picture>
           </div>
           <div class="about-me-container box-shadow">
             <img
               class="tablet left-float box-shadow"
               srcset="
-                assets/red-whiskered-bulbul-320w.jpg 1x,
+                assets/red-whiskered-bulbul-320w.jpg 1.5x,
                 assets/red-whiskered-bulbul-548w.jpg 2x
               "
               src="assets/red-whiskered-bulbul-320w.jpg"
@@ -232,8 +239,11 @@
           </nav>
         </section>
         <picture>
-          <source media="(width < 600px)" srcset="assets/peahen-close-portrait.jpg">
-          <img src="assets/peahen.jpg" alt="a peahen and her chicks">
+          <source
+            media="(width < 600px)"
+            srcset="assets/peahen-close-portrait.jpg"
+          />
+          <img src="assets/peahen.jpg" alt="a peahen and her chicks" />
         </picture>
       </footer>
     </div>
