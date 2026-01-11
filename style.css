@@ -217,7 +217,8 @@ a:has(.icon):focus {
   position: relative;
 }
 
-.portrait-container > img {
+.portrait-container img,
+.portrait-container picture {
   object-fit: cover;
   object-position: center;
   height: 100%;
@@ -342,7 +343,8 @@ padding: var(--padding-size-3) var(--padding-size-4);
   margin-right: 1ch;
 }
 
-.page-footer img {
+.page-footer img,
+.page-footer picture {
   object-fit: cover;
   object-position: center;
   height: 100%;
