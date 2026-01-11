@@ -327,6 +327,11 @@ padding: var(--padding-size-3) var(--padding-size-4);
   transform: scale(1.3);
 }
 
+.contact-info span.phone,
+.contact-info span.email {
+  margin-right: 1ch;
+}
+
 .page-footer img {
   object-fit: cover;
   height: 100%;
