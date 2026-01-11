@@ -394,7 +394,7 @@ padding: var(--padding-size-3) var(--padding-size-4);
 
   .page-header {
     position: relative;
-    padding: 0;
+    padding: 0 var(--padding-size-5);
   }
 
   .page-header::before {
@@ -431,7 +431,7 @@ padding: var(--padding-size-3) var(--padding-size-4);
     object-fit: cover;
     margin-right: var(--padding-size-4);
     transform-origin: bottom right;
-    transform: scale(1.2);
+    transform: scale(1.18);
   }
 
   .page-header {
