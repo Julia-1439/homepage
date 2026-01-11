@@ -419,12 +419,12 @@ padding: var(--padding-size-3) var(--padding-size-4);
     overflow-wrap: revert;
   }
 
-  .text-blocker {
+  .left-float {
     float: left;
     shape-outside: margin-box;
   }
 
-  .about-me-container .text-blocker {
+  .about-me-container .left-float {
     width: 50%;
     min-width: 240px;
     max-height: 300px;
