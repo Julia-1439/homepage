@@ -135,6 +135,15 @@ a:has(.icon):focus {
   outline: 1px dashed white;
 }
 
+.page-footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.page-footer a:hover {
+  text-decoration: none;
+}
+
 .hidden-text-for-aria {
   display: none;
 }
