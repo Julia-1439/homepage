@@ -126,6 +126,15 @@ h3 {
   width: 24px;
 }
 
+a:has(.icon):focus {
+  outline: 1px dashed black;
+  outline-offset: 2px;
+}
+
+.page-footer a:has(.icon):focus {
+  outline: 1px dashed white;
+}
+
 .hidden-text-for-aria {
   display: none;
 }
@@ -313,7 +322,7 @@ padding: var(--padding-size-3) var(--padding-size-4);
   margin-top: var(--padding-size-3);
 }
 
-.page-footer .icons-row svg {
+.page-footer .icons-row a {
   transform-origin: top left;
   transform: scale(1.3);
 }
