@@ -26,12 +26,17 @@
             <h1>Phátography</h1>
             <img
               srcset="
-                assets/red-whiskered-bulbul-320w.jpg 1x,
-                assets/red-whiskered-bulbul-548w.jpg 2x
+                assets/red-whiskered-bulbul-320w.jpg 320w, 
+                assets/red-whiskered-bulbul-320w.jpg 320w, 
+                assets/red-whiskered-bulbul-548w.jpg 548w
+              "
+              sizes="
+                (width <= 600px) calc(100vw - 64px),
+                (width <= 1000px) max(50vw, 240px),
+                calc((100vw - 128px) * 2/5)
               "
               src="assets/red-whiskered-bulbul-320w.jpg"
               alt="a red whiskered bulbul bird"
-              loading="lazy"
             />
           </div>
           <div class="about-me-container box-shadow">
@@ -43,7 +48,6 @@
               "
               src="assets/red-whiskered-bulbul-320w.jpg"
               alt="a red whiskered bulbul bird"
-              loading="lazy"
             />
             <div class="tablet generic-container">
               <h1 class="tablet">Phátography</h1>
