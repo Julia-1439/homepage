@@ -13,6 +13,12 @@
     />
   </head>
   <body>
+    <span id="social-media-navigation" class="hidden-text-for-aria"
+      >Social media navigation</span
+    >
+    <span id="project-navigation" class="hidden-text-for-aria"
+      >Project navigation</span
+    >
     <div class="page-container">
       <main>
         <header class="page-header">
@@ -42,8 +48,9 @@
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <section
+            <nav
               class="icons-row center-vertically right-horizontally gap-4"
+              aria-labelledby="social-media-navigation"
             >
               <a href="" target="_blank"
                 ><span class="icon github">
@@ -86,14 +93,11 @@
                     ></path>
                   </svg> </span
               ></a>
-            </section>
+            </nav>
           </div>
         </header>
         <section class="my-work">
           <h2>My work</h2>
-          <span id="project-navigation" class="hidden-text-for-aria"
-            >Project navigation</span
-          >
           <div class="project-cards-container">
             <section class="project-card">
               <div>
@@ -176,7 +180,10 @@
               &nbsp;&nbsp;real.email@gmail.com
             </p>
           </address>
-          <section class="icons-row center-vertically left-horizontally gap-3">
+          <nav
+            class="icons-row center-vertically left-horizontally gap-3"
+            aria-labelledby="social-media-navigation"
+          >
             <a href="" target="_blank"
               ><span class="icon github">
                 <svg viewBox="0 0 128 128">
@@ -218,7 +225,7 @@
                   ></path>
                 </svg> </span
             ></a>
-          </section>
+          </nav>
         </section>
         <img src="assets/peahen.jpg" alt="a peahen and her chicks" />
       </footer>
