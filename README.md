@@ -35,7 +35,9 @@ Pictures provided by... my father :)
 
 ### room for improvement:
 - known repaint behavior: hovering over a project card repaints all the following cards. can this be prevented or improved? 
+- testing accessibility with a screen reader 
 - less spaghetti code for padding and margins
+- more organized code
 - learn how to generate responsive images automatically (they're a pain to create and configure manually)
 - learn how to <em>test</em> responsive images
 - use webp to improve image download size, only using jpg as fallback
