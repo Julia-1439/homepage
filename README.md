@@ -31,6 +31,7 @@ Pictures provided by... my father :)
 - reading [WCAG checklist](https://webaim.org/standards/wcag/checklist) and implementing applicable ones (e.g. 1.4.4, 1.4.10, 2.4.13, 1.4.12)
 - preventing and debugging overflows 
 - using more helper classes than last time
+- rigorously following a Git branching workflow
 
 ### room for improvement:
 - known repaint behavior: hovering over a project card repaints all the following cards. can this be prevented or improved? 
@@ -41,6 +42,7 @@ Pictures provided by... my father :)
 - more complex animations
 - resize images to the space actually used, to improve image download size 
 - not having a separate image element for the tablet layout. bad for download and not needed if you create a more adaptable header layout
+- more thoroughly testing on other browsers
 - more consistently using utility classes: e.g. icons-row not applied consistently, and the gaps helper classes
 - known bug: dark mode makes the first linkedin icon completely white
 
