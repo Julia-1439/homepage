@@ -30,6 +30,7 @@
                 srcset="assets/red-whiskered-bulbul-320w.jpg"
               />
               <img
+                fetchpriority="high"
                 srcset="assets/red-whiskered-bulbul-548w.jpg 2x"
                 src="assets/red-whiskered-bulbul-320w.jpg"
                 alt="a red whiskered bulbul bird"
@@ -39,6 +40,7 @@
           <div class="about-me-container box-shadow">
             <img
               class="tablet left-float box-shadow"
+              fetchpriority="high"
               srcset="
                 assets/red-whiskered-bulbul-320w.jpg 1.5x,
                 assets/red-whiskered-bulbul-548w.jpg 2x
@@ -473,7 +475,11 @@
             media="(width < 600px)"
             srcset="assets/peahen-close-portrait.jpg"
           />
-          <img src="assets/peahen.jpg" alt="a peahen and her chicks" />
+          <img
+            fetchpriority="high"
+            src="assets/peahen.jpg"
+            alt="a peahen and her chicks"
+          />
         </picture>
       </footer>
     </div>
