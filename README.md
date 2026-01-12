@@ -20,6 +20,7 @@ Pictures provided by... my father :)
   - 'Rendering' tab: highlighting repaints, fps stats, emulate vision deficiencies, emulate dark mode
   - 3D View (Edge Devtools) for visualizing stack contexts
   - CSS Stacking Context inspector (a chrome extension)
+  - Performance tab (Chrome Devtools) (very briefly)
 
 ### did well:
 - layouts follow the design and no overflows on screen sizes >=320px
