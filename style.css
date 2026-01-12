@@ -275,6 +275,7 @@ a:has(.icon):focus {
   -webkit-box-shadow: 8px 8px 19px -3px rgba(0, 0, 0, 0.37);
   box-shadow: 8px 8px 19px -3px rgba(0, 0, 0, 0.37);
   transition: transform 0.5s;
+  /* will-change: transform; */
 }
 
 .project-card:hover {
@@ -372,10 +373,6 @@ main {
 
 /* both tablet and mobile */
 @media (max-width: 1000px) {
-  html {
-    /* --padding-size-1: 80px; */
-  }
-
   .project-cards-container {
     gap: var(--padding-size-3);
     row-gap: var(--padding-size-1);
