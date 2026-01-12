@@ -234,9 +234,9 @@ a:has(.icon):focus {
 }
 
 .about-me-container {
-align-self: center;
-background-color: white;
-padding: var(--padding-size-3) var(--padding-size-4);
+  align-self: center;
+  background-color: white;
+  padding: var(--padding-size-3) var(--padding-size-4);
 }
 
 .about-me-container h2,
@@ -412,12 +412,15 @@ main {
   }
 
   .page-header::before {
-    transform: translateY(calc(-100px - var(--height-adjustment) - 90px)) skewY(-10deg);
+    transform: translateY(calc(-100px - var(--height-adjustment) - 90px))
+      skewY(-10deg);
   }
 
   .about-me-container .generic-container:has(h1) {
     position: absolute;
-    min-width: calc(50% - 240px); /* @todo use variable to have it dynamically match with the image */
+    min-width: calc(
+      50% - 240px
+    ); /* @todo use variable to have it dynamically match with the image */
     width: 50%;
     right: 0;
     top: -96px;
@@ -470,9 +473,9 @@ main {
   .page-footer {
     grid-template-columns: 3fr 2fr;
     gap: var(--padding-size-4);
-    padding-top: var(--padding-size-4); 
-    padding-left: var(--padding-size-4); 
-    padding-right: var(--padding-size-4); 
+    padding-top: var(--padding-size-4);
+    padding-left: var(--padding-size-4);
+    padding-right: var(--padding-size-4);
   }
 }
 
@@ -480,12 +483,12 @@ main {
   .page-header {
     grid-template-columns: 1fr;
     padding: var(--padding-size-3);
-  }  
+  }
 
   .page-header h1 {
     overflow-wrap: break-word;
   }
-  
+
   .page-header::before {
     transform: translateY(-70%) skewY(-20deg);
   }
@@ -503,9 +506,9 @@ main {
   .about-me-container .icons-row {
     justify-content: center;
   }
-  
+
   .my-work {
-    padding: 0 ;
+    padding: 0;
   }
 
   .my-work h2 {
