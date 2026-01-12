@@ -44,7 +44,7 @@ Pictures provided by... my father :)
 - not having a separate image element for the tablet layout. bad for download and not needed if you create a more adaptable header layout
 - more thoroughly testing on other browsers
 - more consistently using utility classes: e.g. icons-row not applied consistently, and the gaps helper classes
-- known bug: dark mode makes the first linkedin icon completely white
+- known bug: some svg icons not compatible with dark mode
 
 
 <details>
