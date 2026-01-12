@@ -34,6 +34,8 @@ Pictures provided by... my father :)
 - rigorously following a Git branching workflow
 
 ### room for improvement:
+- add a reduced motion media query
+- more complex animations
 - known repaint behavior: hovering over a project card repaints all the following cards. can this be prevented or improved? 
 - testing accessibility with a screen reader 
 - less spaghetti code for padding and margins
@@ -41,13 +43,11 @@ Pictures provided by... my father :)
 - learn how to generate responsive images automatically (they're a pain to create and configure manually)
 - learn how to <em>test</em> responsive images
 - use webp to improve image download size, only using jpg as fallback
-- more complex animations
 - resize images to the space actually used, to improve image download size 
 - not having a separate image element for the tablet layout. bad for download and not needed if you create a more adaptable header layout
 - more thoroughly testing on other browsers
 - more consistently using utility classes: e.g. icons-row not applied consistently, and the gaps helper classes
 - known bug: some svg icons not compatible with dark mode
-
 
 <details>
   <summary>
