@@ -267,6 +267,7 @@ a:has(.icon):focus {
   grid-template-columns: repeat(auto-fill, minmax(300px, 0.33333fr));
   grid-auto-rows: 1fr;
   gap: var(--padding-size-3);
+  justify-content: center;
 }
 
 .project-card {
